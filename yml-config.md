@@ -27,4 +27,22 @@ Use HTTPS to access the Harbor Portal and the token/notification service. Always
 
 * private_key: The path to the SSL key.
 
-* strong_ssl_ciphers [read this](README/strong-ssl-ciphers.md)
+* [strong_ssl_ciphers](README/strong-ssl-ciphers.md)
+
+
+## IP Family
+
+	ip_family:
+	        ipv6:
+		   enabled: false
+		ipv4:
+		   enabled: true
+
+* ip_family: This is the category for your network protocol settings.
+
+* ipv4: enabled: true: This is the default. Most networks today still run on IPv4 (addresses like 192.168.1.1). Harbor leaves this on so it can communicate with almost any server.
+
+* ipv6: enabled: false: IPv6 uses much longer addresses (like 2001:0db8:85a3...). By default, Harbor keeps this off because many Docker networks aren't configured for it yet.
+
+
+##
