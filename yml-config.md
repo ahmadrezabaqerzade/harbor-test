@@ -65,3 +65,37 @@ Use HTTPS to access the Harbor Portal and the token/notification service. Always
 * Absolute Links: Every link, redirect, and "pull" command shown in the Harbor interface will use this exact address.
 
 [more information](external-url.md)
+
+## Harbor Admin Password
+	harbor_admin_password: init password
+
+This sets the initial password for the default admin user. When you first 
+open the Harbor web interface, you will log in with the username admin and 
+whatever password you type here.
+
+## Database
+	database:
+  		password: init password
+  		max_idle_conns: 100
+  		max_open_conns: 900
+  		conn_max_lifetime: 5m
+  		conn_max_idle_time: 0
+
+* password: root123: This is the password for the internal postgres user.
+
+* max_idle_conns: 100: This is how many "receptionists" stay at the desk even 
+when no one is asking for help. 
+It keeps Harbor snappy during sudden bursts of traffic.
+
+* max_open_conns: 900: This is the absolute limit of "receptionists" working at
+ once. It should be lower than the database's own max_connections
+ (usually 1024) to leave room for maintenance tasks.
+
+* conn_max_lifetime: 5m: After 5 minutes, a connection is "retired" and replaced 
+with a fresh one. 
+This prevents issues like memory leaks or stale connections.
+
+* conn_max_idle_time: 0: If set to 0, idle connections are never closed 
+based on age (they only close if they hit the max_lifetime).
+
+
