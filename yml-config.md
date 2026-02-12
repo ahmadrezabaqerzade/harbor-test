@@ -17,8 +17,9 @@ Use HTTPS to access the Harbor Portal and the token/notification service. Always
 
 	https:
 	   port: 443
-	   certificate: .crt file path
-	   private_key: .key file path
+	   certificate: your/certificate/path #.crt file path
+	   private_key: your/private/key/path #.key file path
+	   strong_ssl_ciphers: false #(default:false) you can comment this line
 
 port: The port number for HTTPS, for both Harbor portal and Docker commands. The default is 443.
 
