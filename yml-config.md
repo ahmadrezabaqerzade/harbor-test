@@ -98,4 +98,14 @@ This prevents issues like memory leaks or stale connections.
 * conn_max_idle_time: 0: If set to 0, idle connections are never closed 
 based on age (they only close if they hit the max_lifetime).
 
+## Data Volume
+	data_volume: path
+
+The data_volume is the persistent storage location. Even though Harbor runs 
+inside Docker containers, the containers themselves are "ephemeral" 
+(meaning they lose their data if they are deleted). This setting maps a folder on 
+your physical 
+server's hard drive into those containers so your data is saved forever.
+
+[more information](data-volume.md)
 
