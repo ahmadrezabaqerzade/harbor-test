@@ -109,3 +109,17 @@ server's hard drive into those containers so your data is saved forever.
 
 [more information](data-volume.md)
 
+## Storage Service
+	storage_service:
+   		ca_bundle:
+   		filesystem:
+     			maxthreads: 100
+   		redirect:
+     			disable: false
+
+This section is where you decide where your Docker images actually "sleep." 
+By default, they stay on your server's local hard drive, but you can move 
+them to the Cloud.
+
+[more information](storage-service.md)
+
