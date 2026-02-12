@@ -57,4 +57,11 @@ Use HTTPS to access the Harbor Portal and the token/notification service. Always
 
 [more information](internal-tls.md)
 
-## 
+## External URL
+	external_url: https://reg.mydomain.com:8433
+
+* It overrides hostname: Harbor will ignore the hostname setting and use this URL for everything.
+
+* Absolute Links: Every link, redirect, and "pull" command shown in the Harbor interface will use this exact address.
+
+[more information](external-url.md)
