@@ -26,8 +26,5 @@ to use only modern and highly secure encryption algorithms
 
 |Pros|Cons (Cautions)|
 |:-:|:-:|
-|Superior Security: Your data is protected by the best modern world standards.
-|No Support for Legacy Clients: If you have very old systems on your network,
- they may be unable to connect to Harbor.|
-|Compliance: This is mandatory for obtaining standards like SOC2 or PCI-DSS.
-|Minor CPU Load: Stronger encryption may result in a very negligible increase in processing load.|
+|Superior Security: Your data is protected by the best modern world standards.|No Support for Legacy Clients: If you have very old systems on your network,they may be unable to connect to Harbor.|
+|Compliance: This is mandatory for obtaining standards like SOC2 or PCI-DSS.|Minor CPU Load: Stronger encryption may result in a very negligible increase in processing load.|
