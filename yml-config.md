@@ -21,8 +21,10 @@ Use HTTPS to access the Harbor Portal and the token/notification service. Always
 	   private_key: your/private/key/path #.key file path
 	   strong_ssl_ciphers: false #(default:false) you can comment this line
 
-port: The port number for HTTPS, for both Harbor portal and Docker commands. The default is 443.
+* port: The port number for HTTPS, for both Harbor portal and Docker commands. The default is 443.
 
-certificate: The path to the SSL certificate.
+* certificate: The path to the SSL certificate.
 
-private_key: The path to the SSL key.
+* private_key: The path to the SSL key.
+
+* strong_ssl_ciphers [read this](README/strong-ssl-ciphers.md)
