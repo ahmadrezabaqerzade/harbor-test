@@ -7,6 +7,21 @@ Specify the IP address or the fully qualified domain name (FQDN) of the target h
 	hostname: reg.mydomain.com
 
 ## HTTP config
+Do not use HTTP in production environments. Using HTTP is acceptable only in air-gapped test or development environments that do not have a connection to the external internet. Using HTTP in environments that are not air-gapped exposes you to man-in-the-middle attacks.
+
 	http:
 	   port: 80
 
+## HTTPS config
+Use HTTPS to access the Harbor Portal and the token/notification service. Always use HTTPS in production environments and environments that are not air-gapped.
+
+	https:
+	   port: 443
+	   certificate: .crt file path
+	   private_key: .key file path
+
+port: The port number for HTTPS, for both Harbor portal and Docker commands. The default is 443.
+
+certificate: The path to the SSL certificate.
+
+private_key: The path to the SSL key.
