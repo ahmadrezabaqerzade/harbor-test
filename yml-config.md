@@ -33,7 +33,7 @@ Use HTTPS to access the Harbor Portal and the token/notification service. Always
 ## IP Family
 
 	ip_family:
-	        ipv6:
+		ipv6:
 		   enabled: false
 		ipv4:
 		   enabled: true
