@@ -27,7 +27,7 @@ Use HTTPS to access the Harbor Portal and the token/notification service. Always
 
 * private_key: The path to the SSL key.
 
-* [strong_ssl_ciphers](README/strong-ssl-ciphers.md)
+* [strong_ssl_ciphers](strong-ssl-ciphers.md)
 
 
 ## IP Family
@@ -45,4 +45,16 @@ Use HTTPS to access the Harbor Portal and the token/notification service. Always
 * ipv6: enabled: false: IPv6 uses much longer addresses (like 2001:0db8:85a3...). By default, Harbor keeps this off because many Docker networks aren't configured for it yet.
 
 
-##
+## Internal TLS
+
+	internal_tls:
+		enabled: true
+		dir: /etc/harbor/tls/internal
+
+* enabled: true: This turns on encryption for the "internal" conversations between Harbor's microservices.
+
+* dir: /etc/harbor/tls/internal: This is the folder on your hard drive where Harbor will look for the special certificates used for these internal "secret handshakes."
+
+[more information](internal-tls.md)
+
+## 
